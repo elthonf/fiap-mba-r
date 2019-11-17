@@ -1,4 +1,8 @@
-require(visNetwork)
+if (!require("visNetwork")){
+  install.packages("visNetwork")
+  require("visNetwork")
+}
+
 nodes <- data.frame(id = 1:13,
                     shape = c( rep("circularImage",3) , rep("box",10) ),
                     #image = 'http://cdn0.iconfinder.com/data/icons/floral-sketchy-icons/128/17-128.png',
